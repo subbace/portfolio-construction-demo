@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "data_role": "SYNTHETIC_ILLUSTRATION_ONLY",
+  "config": {
+    "seed": 20261105,
+    "design_days": 378,
+    "validation_days": 189,
+    "final_days": 189,
+    "grid_units": 10,
+    "minimum_weight": 0.1,
+    "maximum_weight": 0.6,
+    "first_pair_maximum": 0.7,
+    "transaction_cost_bps": 5.0,
+    "initial_wealth": 100.0,
+    "annualization": 252
+  },
+  "candidate_count_full_investment_grid": 286,
+  "candidate_count_feasible": 75,
+  "selected_candidate_id": "W_1_5_1_3",
+  "selected_weights": {
+    "Asset A": 0.1,
+    "Asset B": 0.5,
+    "Asset C": 0.1,
+    "Asset D": 0.3
+  },
+  "selection_rule": "Maximum design-only net Sharpe; candidate_id lexical tie-break. Select once; no fallback.",
+  "split_policy": "Chronological nonoverlapping 378/189/189; each starts from fresh cash; later splits never select weights.",
+  "transaction_cost_policy": "5 basis points of actual gross buy+sell notional at initial entry and annual rebalance; solved including fees.",
+  "splits": {
+    "design": {
+      "start": "2020-01-02",
+      "end": "2021-06-14",
+      "metrics": {
+        "observations": 378,
+        "total_return": 0.29045794339161723,
+        "cagr_252_day": 0.18530259944481298,
+        "annualized_mean_return": 0.173913559552784,
+        "annualized_volatility": 0.08794404056955384,
+        "sharpe_zero_risk_free": 1.9775479774009015,
+        "maximum_drawdown": -0.04256576205871199,
+        "daily_var95_loss": 0.009403253495247165,
+        "daily_es95_loss": 0.011833495505634615,
+        "terminal_wealth": 129.04579433916172
+      },
+      "total_cost_paid": 0.05735541863318975,
+      "gross_traded_notional": 114.71083726639303
+    },
+    "validation": {
+      "start": "2021-06-15",
+      "end": "2022-03-04",
+      "metrics": {
+        "observations": 189,
+        "total_return": 0.027985841832232072,
+        "cagr_252_day": 0.03748743188323189,
+        "annualized_mean_return": 0.0403138466149365,
+        "annualized_volatility": 0.08403359917789473,
+        "sharpe_zero_risk_free": 0.47973485616859274,
+        "maximum_drawdown": -0.06660211000173488,
+        "daily_var95_loss": 0.007942410885226134,
+        "daily_es95_loss": 0.009667839754819569,
+        "terminal_wealth": 102.7985841832232
+      },
+      "total_cost_paid": 0.05108035669797541,
+      "gross_traded_notional": 102.16071339596434
+    },
+    "final": {
+      "start": "2022-03-07",
+      "end": "2022-11-24",
+      "metrics": {
+        "observations": 189,
+        "total_return": 0.03554333601090609,
+        "cagr_252_day": 0.04766966920219873,
+        "annualized_mean_return": 0.05027111126615861,
+        "annualized_volatility": 0.08624482168154028,
+        "sharpe_zero_risk_free": 0.582888459689616,
+        "maximum_drawdown": -0.05862280172035317,
+        "daily_var95_loss": 0.008688852563280067,
+        "daily_es95_loss": 0.0112005378287633,
+        "terminal_wealth": 103.5543336010906
+      },
+      "total_cost_paid": 0.04997501249374636,
+      "gross_traded_notional": 99.95002498750625
+    }
+  },
+  "limitations": [
+    "Artificial data do not validate a market strategy or forecast returns.",
+    "Finite-grid optimum is conditional on fixed design assumptions, not a continuous global optimum.",
+    "5bps is a scenario assumption; no spread, market impact, tax, funding or empirical fee calibration.",
+    "The original internship project and its 65,807 candidates are not replicated or included.",
+    "No uncertainty interval, multiple-testing adjustment or economic superiority claim."
+  ],
+  "source_sha256": {
+    "src/portfolio_demo.py": "f19fd7c6869c610d1a096e636d685ced12f1da27cdba7d50bde2f265b27088ac",
+    "tests/test_portfolio_demo.py": "8a1ea8c07b2ce911b07d1de9455cb44c5b8829f5ec0a7661e50b0991e6f33b30",
+    "requirements.txt": "9219ba01fa741ccca28c752db67a0ac180f6d9e55cb5198821ded5aa4b4099bd"
+  },
+  "output_sha256": {
+    "candidate_screening.csv": "037d0f38306a1d527044a1c1097da4ed30bf92e2f3b4d4b38a67bb559d82cd0d",
+    "metrics.csv": "598ef23262a9bd38828810480920d936c020cdc23950e3416f896ee1ba693212",
+    "portfolio_overview.png": "3440653b505058362620d7335513825910715cca831becf5c34d904be459248a",
+    "selected_portfolio_daily.csv": "be063cdadef7234bb0b3be8d9d9067d7e1f5bfd8e12166f82d93bb1a8113500e",
+    "synthetic_returns.csv": "4d9afb5ddc7a1c71dbda6d3ed4c6d5750574b00b19fabd044b5bba367980240d"
+  },
+  "validation": {
+    "status": "PASS",
+    "environment": {
+      "python": "3.9.1",
+      "numpy": "2.0.2",
+      "matplotlib": "3.9.4",
+      "platform": "Windows"
+    },
+    "timing_scope": "Elapsed wall time of each subprocess, including import/startup; not CPU or a benchmark.",
+    "steps": [
+      {
+        "command": "python -m unittest discover -s tests -v",
+        "exit_code": 0,
+        "elapsed_seconds": 5.3660747,
+        "stdout": "",
+        "stderr": "test_actual_traded_notional_fee_and_initial_entry (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_annual_rebalance_matches_hand_calculation (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_drawdown_includes_first_day_loss_from_initial_cash (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_fractional_expected_shortfall_manual_examples (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_full_investment_grid_and_constraints (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_future_tampering_cannot_change_selection_or_design_scores (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_infeasible_constraints_fail_without_relaxation (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_invalid_dates_and_returns_are_rejected (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_seed_reproduces_dates_and_values_exactly (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_selection_called_once_with_design_rows_only (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_smoke_exports_parseable_artifacts_and_matching_hashes (test_portfolio_demo.PortfolioDemoTests) ... [python-environment]\\lib\\site-packages\\matplotlib\\_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n  prop = Group((name + Suppress(\"=\") + comma_separated(value)) | oneOf(_CONSTANTS))\n[python-environment]\\lib\\site-packages\\matplotlib\\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n  parse = parser.parseString(pattern)\n[python-environment]\\lib\\site-packages\\matplotlib\\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n  parser.resetCache()\n[python-environment]\\lib\\site-packages\\matplotlib\\_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n  ParserElement.enablePackrat()\nIn [python-environment]\\lib\\site-packages\\matplotlib\\mpl-data\\stylelib\\classic.mplstyle: 'parseString' deprecated - use 'parse_string'\nIn [python-environment]\\lib\\site-packages\\matplotlib\\mpl-data\\stylelib\\classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'\nok\n\n----------------------------------------------------------------------\nRan 11 tests in 3.815s\n\nOK\n"
+      },
+      {
+        "command": "python src/portfolio_demo.py --output outputs",
+        "exit_code": 0,
+        "elapsed_seconds": 2.4324847,
+        "stdout": "{\"data_role\": \"SYNTHETIC_ILLUSTRATION_ONLY\", \"feasible_candidates\": 75, \"selected_candidate_id\": \"W_1_5_1_3\"}\n",
+        "stderr": ""
+      }
+    ],
+    "tests_reported": 11,
+    "warnings_observed": true
+  }
+}

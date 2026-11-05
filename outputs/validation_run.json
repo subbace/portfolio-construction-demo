@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "environment": {
+    "python": "3.9.1",
+    "numpy": "2.0.2",
+    "matplotlib": "3.9.4",
+    "platform": "Windows"
+  },
+  "timing_scope": "Elapsed wall time of each subprocess, including import/startup; not CPU or a benchmark.",
+  "steps": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "elapsed_seconds": 5.3660747,
+      "stdout": "",
+      "stderr": "test_actual_traded_notional_fee_and_initial_entry (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_annual_rebalance_matches_hand_calculation (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_drawdown_includes_first_day_loss_from_initial_cash (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_fractional_expected_shortfall_manual_examples (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_full_investment_grid_and_constraints (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_future_tampering_cannot_change_selection_or_design_scores (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_infeasible_constraints_fail_without_relaxation (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_invalid_dates_and_returns_are_rejected (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_seed_reproduces_dates_and_values_exactly (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_selection_called_once_with_design_rows_only (test_portfolio_demo.PortfolioDemoTests) ... ok\ntest_smoke_exports_parseable_artifacts_and_matching_hashes (test_portfolio_demo.PortfolioDemoTests) ... [python-environment]\\lib\\site-packages\\matplotlib\\_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n  prop = Group((name + Suppress(\"=\") + comma_separated(value)) | oneOf(_CONSTANTS))\n[python-environment]\\lib\\site-packages\\matplotlib\\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n  parse = parser.parseString(pattern)\n[python-environment]\\lib\\site-packages\\matplotlib\\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n  parser.resetCache()\n[python-environment]\\lib\\site-packages\\matplotlib\\_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n  ParserElement.enablePackrat()\nIn [python-environment]\\lib\\site-packages\\matplotlib\\mpl-data\\stylelib\\classic.mplstyle: 'parseString' deprecated - use 'parse_string'\nIn [python-environment]\\lib\\site-packages\\matplotlib\\mpl-data\\stylelib\\classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'\nok\n\n----------------------------------------------------------------------\nRan 11 tests in 3.815s\n\nOK\n"
+    },
+    {
+      "command": "python src/portfolio_demo.py --output outputs",
+      "exit_code": 0,
+      "elapsed_seconds": 2.4324847,
+      "stdout": "{\"data_role\": \"SYNTHETIC_ILLUSTRATION_ONLY\", \"feasible_candidates\": 75, \"selected_candidate_id\": \"W_1_5_1_3\"}\n",
+      "stderr": ""
+    }
+  ],
+  "tests_reported": 11,
+  "warnings_observed": true
+}

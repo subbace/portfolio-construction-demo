@@ -1,0 +1,63 @@
+{
+  "date_utc": "2026-11-05T21:38:31.522715+00:00",
+  "slug": "portfolio-construction-demo",
+  "fresh_local_git_clone": true,
+  "local_source_commit": "48e352741710af8395f1a5908e8616048aed6a9d",
+  "byte_identity_before_execution": true,
+  "steps": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "-r",
+        "requirements.txt"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.354337
+    },
+    {
+      "command": [
+        "python",
+        "tools/validate.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 6.120228
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.840912
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows",
+    "isolated_prefix": true
+  },
+  "installed_distributions": [
+    "contourpy==1.4.0",
+    "cycler==0.12.1",
+    "fonttools==4.68.0",
+    "kiwisolver==1.5.1",
+    "matplotlib==3.9.4",
+    "numpy==2.0.2",
+    "packaging==26.3",
+    "pillow==13.0.0",
+    "pyparsing==3.3.3",
+    "python-dateutil==4.0.0",
+    "tzdata==2026.6"
+  ],
+  "status": "PASS",
+  "reference_metrics_comparison": "PASS atol=rtol=1e-10 for split metrics; same selected candidate",
+  "unit_tests_passed": 11,
+  "source_changes_after_validation": "Documentation and release metadata only; tested source code unchanged.",
+  "packaging_preflight": "First clone had line-ending byte changes before tests. Preserved; recovered in a separate clone using explicit attributes. No test failure removed."
+}

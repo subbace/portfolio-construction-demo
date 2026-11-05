@@ -1,0 +1,97 @@
+{
+  "schema": "public-demo-release-v1",
+  "repository": "subbace/portfolio-construction-demo",
+  "date": "2026-11-05",
+  "role": "PUBLIC_REDUCED_DEMONSTRATION",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 68,
+      "sha256": "398641862AA62F01F986D132B1B12FC6727620DF72F5646191BBFFB43F5A3924"
+    },
+    {
+      "path": "outputs/candidate_screening.csv",
+      "bytes": 16074,
+      "sha256": "037D0F38306A1D527044A1C1097DA4ED30BF92E2F3B4D4B38A67BB559D82CD0D"
+    },
+    {
+      "path": "outputs/metrics.csv",
+      "bytes": 831,
+      "sha256": "598EF23262A9BD38828810480920D936C020CDC23950E3416F896EE1BA693212"
+    },
+    {
+      "path": "outputs/portfolio_overview.png",
+      "bytes": 115790,
+      "sha256": "3440653B505058362620D7335513825910715CCA831BECF5C34D904BE459248A"
+    },
+    {
+      "path": "outputs/selected_portfolio_daily.csv",
+      "bytes": 51777,
+      "sha256": "BE063CDADEF7234BB0B3BE8D9D9067D7E1F5BFD8E12166F82D93BB1A8113500E"
+    },
+    {
+      "path": "outputs/summary.json",
+      "bytes": 7641,
+      "sha256": "C715C5C8CF486CA058AD8514459BACA8BEEB458DF5242AF84B204A26795C5234"
+    },
+    {
+      "path": "outputs/synthetic_returns.csv",
+      "bytes": 74891,
+      "sha256": "4D9AFB5DDC7A1C71DBDA6D3ED4C6D5750574B00B19FABD044B5BBA367980240D"
+    },
+    {
+      "path": "outputs/validation_run.json",
+      "bytes": 3093,
+      "sha256": "0B15E1B258566F291C4CDCC1FA3210F7F566143DAFEDCB83B3BB074CBE6FB52C"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9524,
+      "sha256": "7FD06B6050A5BACB44927616210B204398409EF4E7FE98FA31B92916B6F7A6F3"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 31,
+      "sha256": "9219BA01FA741CCCA28C752DB67A0AC180F6D9E55CB5198821DED5AA4B4099BD"
+    },
+    {
+      "path": "RIGHTS_AND_PROVENANCE.md",
+      "bytes": 2860,
+      "sha256": "68DAAFE4E2294F95B1028A4F350A84F35E8E3901C88ADC1C1F52FEC7298E834E"
+    },
+    {
+      "path": "src/portfolio_demo.py",
+      "bytes": 16704,
+      "sha256": "F19FD7C6869C610D1A096E636D685CED12F1DA27CDBA7D50BDE2F265B27088AC"
+    },
+    {
+      "path": "tests/test_portfolio_demo.py",
+      "bytes": 6994,
+      "sha256": "8A1EA8C07B2CE911B07D1DE9455CB44C5B8829F5EC0A7661E50B0991E6F33B30"
+    },
+    {
+      "path": "tools/validate.py",
+      "bytes": 4478,
+      "sha256": "6515FC2DC7EE19A263EDF0FFA598CBDB3E821C4C8D4C0A402A2EC8BD641E71D6"
+    },
+    {
+      "path": "validation/CLEAN_ENVIRONMENT.json",
+      "bytes": 1689,
+      "sha256": "B77353C04CE7BF91224F50953E1AA9FD73A67B14E8D1ED76295400CE4E9F5DB1"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 2432,
+      "sha256": "BAA3218A73D43C8AEE84FEDCEDEAAD16255D5512857F3B8A54E248D7A871A944"
+    }
+  ],
+  "manifest_self_excluded": true,
+  "private_originals_unchanged": true,
+  "owner_distribution_rights_confirmed": true,
+  "economic_validation": false
+}
